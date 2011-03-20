@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  time: 2011-02-13 15:08:32
+  address: MyString
+  map_url: MyString
+  total_seats: 1
+  reserve_percentage: 1
+  city: MyString
+  state: MyString
+  zip: 1
+  country: MyString
+  info: MyString
+  details: MyString
+
+two:
+  name: MyString
+  time: 2011-02-13 15:08:32
+  address: MyString
+  map_url: MyString
+  total_seats: 1
+  reserve_percentage: 1
+  city: MyString
+  state: MyString
+  zip: 1
+  country: MyString
+  info: MyString
+  details: MyString

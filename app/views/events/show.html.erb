@@ -1,0 +1,34 @@
+<div class="grid_12">
+	<p id="notice"><%= notice %></p>
+
+	<h1><%= @event.name %></h1>
+
+	<h3>
+	  <%= @event.time.strftime("%I:%M%p %A %b %d") %>
+	</h3>
+
+	<p>
+	  <%= @event.address %> <br>
+	  <%= @event.city %>, <%= @event.state %> <%= @event.zip %> <%= @event.country %>
+	</p>
+
+	<p>
+	  <b>Map url:</b>
+	  <%= @event.map_url %>
+	</p>
+	
+	<p>
+	  <%= @event.info %>
+	</p>
+
+	<p>
+	  <b>Details:</b>
+	  <%= @event.details %>
+	</p>
+
+	<%= render :partial=>"reservation_form", :locals => {:reservation => Reservation.new(:event_id=>@event.id)}%>
+
+	<%= link_to 'Edit', edit_event_path(@event) %> |
+	<%= link_to 'Back', events_path %>
+</div>
+<div class="clear"> </div>

@@ -1,0 +1,35 @@
+<table>
+  <tr>
+    <th>First</th>
+    <th>Last</th>
+    <th>Event</th>
+    <th>Seats</th>
+    <th>Email</th>
+	<th>Phone</th>
+    <th>Tour</th>
+    <th>Newsletter</th>
+	<th>Handicapped</th>
+    <th>Comment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% reservations.each do |reservation| %>
+  <tr>
+    <td><%= reservation.first %></td>
+    <td><%= reservation.last %></td>
+    <td><%= reservation.event_id %></td>
+    <td><%= reservation.seats %></td>
+    <td><%= reservation.email %></td>
+	<td><%= reservation.phone %></td>
+    <td><%= reservation.tour %></td>
+    <td><%= reservation.newsletter %></td>
+	<td><%= reservation.handicapped %></td>
+    <td><%= reservation.comment %></td>
+    <td><%= link_to 'Show', reservation %></td>
+    <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
+    <td><%= link_to 'Destroy', reservation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

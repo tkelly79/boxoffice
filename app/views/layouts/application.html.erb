@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boxoffice</title>
+  <%= stylesheet_link_tag :all %>
+  <link rel="stylesheet" type="text/css" href="http://passion-play.org/css/style.css">
+  <script src="http://passion-play.org/js/modernizr-1.5.min.js"></script>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js", "rails.jquery.js", "application.js" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<div class="container_12">
+		<div class="grid_8"><img src="http://passion-play.org/images/banner.jpg"></div>
+    	<div class="grid_4"><a href="http://passion-play.org"><img class="floatright" src="http://passion-play.org/images/logo.png"></a></div>
+		<div class="clear"></div>
+
+		<!-- start of nav -->
+		<div class="grid_12">
+			<div id="center">
+				<div id="center-in">
+				<ul id="nav-center">
+					<li><a href=""  class="active">Home</a></li>
+					<li><a href="cities.html">Cities</a></li>
+					<!--  <li><a href="">Photos</a></li> -->
+					<li><a href="./about.html">About</a></li>
+					<li><a href="https://dlq4.donatelinq.net/donatelinq4/default.aspx?MerchantID=PPMI">Donate</a></li>
+				</ul>
+			</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+
+		<%= yield %>
+		
+		<!-- start of footer -->
+		<div class="grid_12">
+			<div id="footer">
+				copyright &copy Passion Play Ministries International
+			</div>
+		</div>
+		<div class="clear"></div>
+		<!-- end of footer -->
+	</div> <!--! end of #container -->
+
+
+</body>
+</html>

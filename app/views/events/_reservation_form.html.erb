@@ -1,0 +1,57 @@
+<%= form_for(reservation) do |f| %>
+  <% if reservation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+
+      <ul>
+      <% reservation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+	<%= f.label :event_id %>
+  	<%= f.hidden_field :event_id %>
+  </div>
+  <div class="field">
+    <%= f.label :first %><br />
+    <%= f.text_field :first %>
+  </div>
+  <div class="field">
+    <%= f.label :last %><br />
+    <%= f.text_field :last %>
+  </div>
+  <div class="field">
+    <%= f.label :seats %><br />
+    <%= f.text_field :seats %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :tour %><br />
+    <%= f.check_box :tour %> The backstage tour begins at 5:45 and will give your group an up close look at PPMI, and how you can get involved.
+  </div>
+  <div class="field">
+    <%= f.label :newsletter %><br />
+    <%= f.check_box :newsletter %>
+  </div>
+  <div class="field">
+    <%= f.label :handicapped %><br />
+    <%= f.check_box :handicapped %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_field :comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

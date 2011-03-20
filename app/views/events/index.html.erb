@@ -1,0 +1,19 @@
+<div class="grid_12">
+	
+	<h1>Passion Play 2011 Online Reservations</h1>
+	
+	<p>To reserver seats for a Passion Play in your city, please start by selecting a performance below.</p>
+	
+	<% cities = Event.find(:all).map{|i| i.city}.uniq %>
+	<% cities.each do |city| %>
+		<h2><%= city %></h2>
+		<% upcoming_events = Event.where("city = ? AND time > ?", city, Time.now ) %>
+		<p>
+		<% upcoming_events.each do |event| %>
+				<%= link_to "#{event.time.strftime("%I:%M%p %A %b %d")}", event %> | 
+		<% end %>
+		</p>
+	<% end %>
+
+</div>
+<div class="clear"> </div>
